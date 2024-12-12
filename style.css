@@ -1,49 +1,240 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV d'Étudiant</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>Jean Dupont</h1>
-      <p>Développeur Web Junior</p>
-      <img src="profil.jpg" alt="Photo de Jean Dupont" class="profile-img">
-    </div>
+/* Réinitialisation des marges et des bordures */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <div class="section">
-      <h2>Informations de contact</h2>
-      <p class="contact-info">
-        <a href="mailto:jean.dupont@email.com">jean.dupont@email.com</a>
-        <a href="https://www.linkedin.com/in/jean-dupont">LinkedIn</a>
-      </p>
-    </div>
+/* Police de base */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc; /* Gris clair */
+  color: #333; /* Texte gris foncé */
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    <div class="section">
-      <h2>Expérience</h2>
-      <ul>
-        <li><span>2023 - Présent :</span> Développeur Web chez XYZ Corp.</li>
-        <li><span>2022 - 2023 :</span> Stagiaire Développeur Front-End chez ABC Ltd.</li>
-      </ul>
-    </div>
+/* Conteneur principal */
+.container {
+  background-color: white;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
 
-    <div class="section">
-      <h2>Compétences</h2>
-      <ul class="skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-      </ul>
-    </div>
-  </div>
-</body>
-</html>
+/* En-tête de la page */
+header {
+  background-color: #1a2a6c; /* Bleu marine */
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
 
+nav ul li {
+  margin: 0 15px;
+}
 
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+}
 
+nav ul li a:hover {
+  color: #ff6f61; /* Couleur complémentaire : corail */
+}
+
+/* Section d'accueil */
+.hero {
+  background-color: #1a2a6c; /* Bleu marine */
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  color: #ff6f61; /* Couleur complémentaire : corail */
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #ff6f61; /* Corail */
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #ff3e29; /* Corail plus foncé */
+}
+
+/* Section À propos */
+.about {
+  padding: 40px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2em;
+  color: #1a2a6c;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Sections (Expérience, Formation, Compétences) */
+section {
+  padding: 40px 0;
+}
+
+h2 {
+  font-size: 2em;
+  color: #1a2a6c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #1a2a6c;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 1.1em;
+  color: #444;
+  padding: 8px 0;
+}
+
+ul li span {
+  font-weight: 600;
+  color: #1a2a6c;
+}
+
+/* Liste des compétences */
+.competences-list li {
+  display: inline-block;
+  background-color: #1a2a6c;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin: 10px 10px 0 0;
+  font-size: 1.1em;
+}
+
+.competences-list li:hover {
+  background-color: #ff6f61; /* Corail */
+  cursor: pointer;
+}
+
+/* Section de contact */
+.contact {
+  padding: 40px 0;
+  background-color: #f4f7fc;
+}
+
+.contact form {
+  display: grid;
+  gap: 20px;
+}
+
+.contact form label {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  font-size: 1.1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form button {
+  background-color: #1a2a6c;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: #ff6f61; /* Corail */
+}
+
+/* Footer */
+footer {
+  background-color: #1a2a6c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2em;
+  }
+
+  .cta-button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+  }
+
+  .contact form {
+    gap: 15px;
+  }
+
+  .competences-list li {
+    font-size: 1em;
+  }
+}
