@@ -1,9 +1,118 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Titre de la page</title>
-  </head>
-  <body>
-    <!-- Contenu de la page -->
-  </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ilian Boussedi">
+    <meta name="description" content="CV interactif et portfolio d'un étudiant en développement web">
+    <title>CV - Ilian Boussedi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>Bonjour, je suis <span>Ilian Boussedi</span></h1>
+            <p>Étudiant en développement web, passionné par les technologies modernes et l'innovation numérique.</p>
+            <a href="#about" class="cta-button">En savoir plus</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>Je suis un étudiant en Licence produits et services sportifs à l'ILEPS. Passionné de sport et plus particulièrement de basketball ainsi que de marketing et de communication. Actuellement en alternance au club de Chatou Croissy Basket où j'occupe de nombreux postes tels que la gestion de la communication, du marketing; mais également des événements et la recherche de sponsor.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Expériences professionnelles</h2>
+            <div class="experience-item">
+                <h3>Vendeur- Stage</h3>
+                <p><strong>Décathlon</strong> - Décembre - Janvier 2022 </p>
+                <ul>
+                    <li>Développement de fonctionnalités en React.js</li>
+                    <li>Création d'APIs avec Node.js et Express</li>
+                    <li>Collaboration avec une équipe de designers et de développeurs</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Développeur Frontend - Freelance</h3>
+                <p><strong>Projet personnel</strong> - Janvier 2023 - Présent</p>
+                <ul>
+                    <li>Conception d'un portfolio personnel</li>
+                    <li>Création d'un site e-commerce avec Vue.js</li>
+                    <li>Optimisation des performances du site et du SEO</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="formation">
+        <div class="container">
+            <h2>Formation</h2>
+            <div class="formation-item">
+                <h3>Licence professionnel CPSS</h3>
+                <p><strong>Université ILEPS</strong> - Septembre 2022 - Juin 2025</p>
+                <p>Commercialisation des produits et services sportifs</p>
+            </div>
+            <div class="formation-item">
+                <h3>Baccalauréat </h3>
+                <p><strong>Lycée Saint Erembert</strong> - Juin 2022</p>
+                <p>Spécialité : Histoire Géo Politique et SES</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="competences">
+        <div class="container">
+            <h2>Compétences</h2>
+            <ul class="competences-list">
+                <li>ANGLAIS</li>
+                <li>CANVA/ADOBE/CAPCUT</li>
+                <li>PACK OFFICE</li>
+                <li>Node.js, Express.js</li>
+                <li>Git / GitHub</li>
+                <li>UI/UX Design</li>
+             
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <form action="#" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <p>Vous pouvez aussi télécharger mon <a href="#">CV PDF</a> pour plus de détails.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ilian Boussedi | Tous droits réservés</p>
+    </footer>
+
+</body>
 </html>
