@@ -1,132 +1,49 @@
-/* Réinitialisation de la mise en page */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV d'Étudiant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Jean Dupont</h1>
+      <p>Développeur Web Junior</p>
+      <img src="profil.jpg" alt="Photo de Jean Dupont" class="profile-img">
+    </div>
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF;
-    color: #0000FF;
-    line-height: 1.6;
-}
+    <div class="section">
+      <h2>Informations de contact</h2>
+      <p class="contact-info">
+        <a href="mailto:jean.dupont@email.com">jean.dupont@email.com</a>
+        <a href="https://www.linkedin.com/in/jean-dupont">LinkedIn</a>
+      </p>
+    </div>
 
-/* Liens généraux */
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    <div class="section">
+      <h2>Expérience</h2>
+      <ul>
+        <li><span>2023 - Présent :</span> Développeur Web chez XYZ Corp.</li>
+        <li><span>2022 - 2023 :</span> Stagiaire Développeur Front-End chez ABC Ltd.</li>
+      </ul>
+    </div>
 
-ul {
-    list-style: none;
-}
+    <div class="section">
+      <h2>Compétences</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
 
-header {
-    background-color: #000080; /* Bleu vif */
-    padding: 1.5rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
 
-nav ul li {
-    margin: 0;
-}
 
-nav ul li a {
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.5rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #FFFF00; /* Jaune doré */
-}
-
-.hero {
-    background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 8rem 2rem;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ombre sombre pour améliorer la lisibilité */
-    z-index: -1;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.hero span {
-    color: #ffd700; /* Jaune doré */
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.cta-button {
-    padding: 1rem 2.5rem;
-    background-color: #ffd700; /* Jaune doré */
-    color: #333;
-    border-radius: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #ffcc00; /* Jaune plus vif */
-    transform: scale(1.05);
-}
-
-/* Section Compétences */
-.competences {
-    padding: 4rem 2rem;
-    background-color: #f4f4f4; /* Gris très clair */
-}
-
-.competences h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #333;
-}
-
-.competences-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.competences-list li {
-    background-color: #fff;
-    padding: 1.5rem 2rem;
-    border-radius: 50px;
-    box-shadow: 0
