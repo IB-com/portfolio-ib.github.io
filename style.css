@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 /* Conteneur principal */
@@ -24,9 +25,9 @@ body {
   max-width: 1200px;
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 30px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -34,10 +35,11 @@ body {
 /* En-tête de la page */
 header {
   background-color: #1a2a6c; /* Bleu marine */
-  padding: 10px 0;
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -47,7 +49,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav ul li a {
@@ -55,28 +57,34 @@ nav ul li a {
   text-decoration: none;
   font-size: 1.1em;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #ff6f61; /* Couleur complémentaire : corail */
+  transform: scale(1.05);
 }
 
 /* Section d'accueil */
 .hero {
   background-color: #1a2a6c; /* Bleu marine */
   color: white;
-  padding: 60px 0;
+  padding: 80px 0;
   text-align: center;
+  background-image: url('https://www.example.com/hero-background.jpg'); /* Image de fond (optionnelle) */
+  background-size: cover;
+  background-position: center;
 }
 
 .hero h1 {
-  font-size: 2.8em;
+  font-size: 3em;
   font-weight: 700;
   margin-bottom: 15px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero span {
-  color: #ff6f61; /* Couleur complémentaire : corail */
+  color: #ff6f61; /* Corail */
 }
 
 .hero p {
@@ -87,48 +95,63 @@ nav ul li a:hover {
 .cta-button {
   background-color: #ff6f61; /* Corail */
   color: white;
-  padding: 10px 25px;
+  padding: 15px 30px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta-button:hover {
-  background-color: #ff3e29; /* Corail plus foncé */
+  background-color: #ff3e29; /* Corail foncé */
+  transform: translateY(-5px);
+}
+
+/* Animation de fade-in pour l'en-tête */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Section À propos */
 .about {
-  padding: 40px 0;
-  background-color: #ffffff;
+  padding: 60px 0;
+  background-color: white;
   text-align: center;
 }
 
 .about h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #1a2a6c;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .about p {
   font-size: 1.1em;
   color: #555;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Sections (Expérience, Formation, Compétences) */
 section {
-  padding: 40px 0;
+  padding: 60px 0;
+  background-color: #f4f7fc;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   color: #1a2a6c;
   margin-bottom: 20px;
   text-align: center;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   color: #1a2a6c;
   margin-bottom: 10px;
 }
@@ -141,6 +164,11 @@ ul li {
   font-size: 1.1em;
   color: #444;
   padding: 8px 0;
+  transition: transform 0.2s ease;
+}
+
+ul li:hover {
+  transform: translateX(10px);
 }
 
 ul li span {
@@ -153,21 +181,23 @@ ul li span {
   display: inline-block;
   background-color: #1a2a6c;
   color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  margin: 10px 10px 0 0;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 10px;
   font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .competences-list li:hover {
-  background-color: #ff6f61; /* Corail */
+  background-color: #ff6f61;
   cursor: pointer;
+  transform: translateY(-5px);
 }
 
 /* Section de contact */
 .contact {
-  padding: 40px 0;
-  background-color: #f4f7fc;
+  padding: 60px 0;
+  background-color: white;
 }
 
 .contact form {
@@ -182,39 +212,52 @@ ul li span {
 
 .contact form input,
 .contact form textarea {
-  padding: 10px;
+  padding: 12px;
   font-size: 1.1em;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #1a2a6c; /* Bleu marine */
+  outline: none;
 }
 
 .contact form button {
   background-color: #1a2a6c;
   color: white;
-  padding: 12px 25px;
+  padding: 15px 30px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact form button:hover {
   background-color: #ff6f61; /* Corail */
+  transform: translateY(-3px);
 }
 
 /* Footer */
 footer {
   background-color: #1a2a6c;
   color: white;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
   font-size: 1.1em;
+  margin-top: 40px;
+  border-radius: 8px;
+  width: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
+    padding: 20px 0;
   }
 
   .container {
@@ -222,12 +265,16 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
 
   .cta-button {
-    font-size: 1.1em;
-    padding: 10px 20px;
+    font-size: 1.2em;
+    padding: 12px 25px;
+  }
+
+  .about h2, .experience h2, .formation h2, .competences h2 {
+    font-size: 2.2em;
   }
 
   .contact form {
@@ -236,5 +283,6 @@ footer {
 
   .competences-list li {
     font-size: 1em;
+    padding: 8px 15px;
   }
 }
