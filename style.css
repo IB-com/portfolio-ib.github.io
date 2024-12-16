@@ -286,3 +286,27 @@ footer {
     padding: 8px 15px;
   }
 }
+/* Style de la photo de profil */
+.profile-image {
+    width: 200px; /* Taille de l'image */
+    height: 200px;
+    border-radius: 50%; /* Rend l'image ronde */
+    object-fit: cover; /* Garde l'image bien centrée sans déformation */
+    margin: 20px auto; /* Centrage de l'image */
+    display: block; /* Centre l'image avec margin auto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+
+/* Ajustement pour le conteneur de la section About */
+.about-content {
+    display: flex; /* Mise en ligne du texte et de l'image */
+    align-items: center; /* Alignement vertical centré */
+    justify-content: center; /* Alignement horizontal centré */
+    gap: 20px; /* Espacement entre l'image et le texte */
+    flex-wrap: wrap; /* Adaptation en responsive */
+}
+
+.about-content p {
+    flex: 1; /* Prend tout l'espace restant */
+    text-align: justify; /* Alignement du texte */
+}
